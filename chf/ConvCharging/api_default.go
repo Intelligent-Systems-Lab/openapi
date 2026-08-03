@@ -619,6 +619,7 @@ func (r *ChargingdataPostRequest) SetRequestBody(
 }
 
 type ChargingdataPostResponse struct {
+	Location                              string
 	Chf_ConvCharging_ChargingDataResponse *models.Chf_ConvCharging_ChargingDataResponse
 }
 
@@ -720,6 +721,9 @@ func (a *DefaultApiService) ChargingdataPost(
 		if err != nil {
 			return nil, err
 		}
+		localVarReturnValue.Location = localVarHTTPResponse.Header.Get(
+			"Location",
+		)
 		return &localVarReturnValue, nil
 	case 400:
 		var v ChargingdataPostError
