@@ -12,9 +12,10 @@
 
 package models
 
-// The execution report result on failed modification.
-type PatchResult struct {
-	// The execution report contains an array of report items. Each report item indicates one
-	// failed modification.
-	Report []ReportItem `json:"report,omitempty" yaml:"report,omitempty" bson:"report,omitempty"`
-}
+type Upf_EvtExpos_ReportingUrgency string
+
+// List of Upf_EvtExpos_ReportingUrgency
+const (
+	Upf_EvtExpos_ReportingUrgency_DELAY_TOLERANT     Upf_EvtExpos_ReportingUrgency = "DELAY_TOLERANT"     // #nosec G101
+	Upf_EvtExpos_ReportingUrgency_NON_DELAY_TOLERANT Upf_EvtExpos_ReportingUrgency = "NON_DELAY_TOLERANT" // #nosec G101
+)

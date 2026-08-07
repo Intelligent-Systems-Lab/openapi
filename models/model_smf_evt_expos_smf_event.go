@@ -16,21 +16,23 @@ type Smf_EvtExpos_SmfEvent string
 
 // List of Smf_EvtExpos_SmfEvent
 const (
-	Smf_EvtExpos_SmfEvent_AC_TY_CH       Smf_EvtExpos_SmfEvent = "AC_TY_CH"       // #nosec G101
-	Smf_EvtExpos_SmfEvent_UP_PATH_CH     Smf_EvtExpos_SmfEvent = "UP_PATH_CH"     // #nosec G101
-	Smf_EvtExpos_SmfEvent_PDU_SES_REL    Smf_EvtExpos_SmfEvent = "PDU_SES_REL"    // #nosec G101
-	Smf_EvtExpos_SmfEvent_PLMN_CH        Smf_EvtExpos_SmfEvent = "PLMN_CH"        // #nosec G101
-	Smf_EvtExpos_SmfEvent_UE_IP_CH       Smf_EvtExpos_SmfEvent = "UE_IP_CH"       // #nosec G101
-	Smf_EvtExpos_SmfEvent_RAT_TY_CH      Smf_EvtExpos_SmfEvent = "RAT_TY_CH"      // #nosec G101
-	Smf_EvtExpos_SmfEvent_DDDS           Smf_EvtExpos_SmfEvent = "DDDS"           // #nosec G101
-	Smf_EvtExpos_SmfEvent_COMM_FAIL      Smf_EvtExpos_SmfEvent = "COMM_FAIL"      // #nosec G101
-	Smf_EvtExpos_SmfEvent_PDU_SES_EST    Smf_EvtExpos_SmfEvent = "PDU_SES_EST"    // #nosec G101
-	Smf_EvtExpos_SmfEvent_QFI_ALLOC      Smf_EvtExpos_SmfEvent = "QFI_ALLOC"      // #nosec G101
-	Smf_EvtExpos_SmfEvent_QOS_MON        Smf_EvtExpos_SmfEvent = "QOS_MON"        // #nosec G101
-	Smf_EvtExpos_SmfEvent_SMCC_EXP       Smf_EvtExpos_SmfEvent = "SMCC_EXP"       // #nosec G101
-	Smf_EvtExpos_SmfEvent_DISPERSION     Smf_EvtExpos_SmfEvent = "DISPERSION"     // #nosec G101
-	Smf_EvtExpos_SmfEvent_RED_TRANS_EXP  Smf_EvtExpos_SmfEvent = "RED_TRANS_EXP"  // #nosec G101
-	Smf_EvtExpos_SmfEvent_WLAN_INFO      Smf_EvtExpos_SmfEvent = "WLAN_INFO"      // #nosec G101
-	Smf_EvtExpos_SmfEvent_UPF_INFO       Smf_EvtExpos_SmfEvent = "UPF_INFO"       // #nosec G101
-	Smf_EvtExpos_SmfEvent_UP_STATUS_INFO Smf_EvtExpos_SmfEvent = "UP_STATUS_INFO" // #nosec G101
+	Smf_EvtExpos_SmfEvent_AC_TY_CH            Smf_EvtExpos_SmfEvent = "AC_TY_CH"            // #nosec G101
+	Smf_EvtExpos_SmfEvent_UP_PATH_CH          Smf_EvtExpos_SmfEvent = "UP_PATH_CH"          // #nosec G101
+	Smf_EvtExpos_SmfEvent_PDU_SES_REL         Smf_EvtExpos_SmfEvent = "PDU_SES_REL"         // #nosec G101
+	Smf_EvtExpos_SmfEvent_PLMN_CH             Smf_EvtExpos_SmfEvent = "PLMN_CH"             // #nosec G101
+	Smf_EvtExpos_SmfEvent_UE_IP_CH            Smf_EvtExpos_SmfEvent = "UE_IP_CH"            // #nosec G101
+	Smf_EvtExpos_SmfEvent_RAT_TY_CH           Smf_EvtExpos_SmfEvent = "RAT_TY_CH"           // #nosec G101
+	Smf_EvtExpos_SmfEvent_DDDS                Smf_EvtExpos_SmfEvent = "DDDS"                // #nosec G101
+	Smf_EvtExpos_SmfEvent_COMM_FAIL           Smf_EvtExpos_SmfEvent = "COMM_FAIL"           // #nosec G101
+	Smf_EvtExpos_SmfEvent_PDU_SES_EST         Smf_EvtExpos_SmfEvent = "PDU_SES_EST"         // #nosec G101
+	Smf_EvtExpos_SmfEvent_QFI_ALLOC           Smf_EvtExpos_SmfEvent = "QFI_ALLOC"           // #nosec G101
+	Smf_EvtExpos_SmfEvent_QOS_MON             Smf_EvtExpos_SmfEvent = "QOS_MON"             // #nosec G101
+	Smf_EvtExpos_SmfEvent_SMCC_EXP            Smf_EvtExpos_SmfEvent = "SMCC_EXP"            // #nosec G101
+	Smf_EvtExpos_SmfEvent_DISPERSION          Smf_EvtExpos_SmfEvent = "DISPERSION"          // #nosec G101
+	Smf_EvtExpos_SmfEvent_RED_TRANS_EXP       Smf_EvtExpos_SmfEvent = "RED_TRANS_EXP"       // #nosec G101
+	Smf_EvtExpos_SmfEvent_WLAN_INFO           Smf_EvtExpos_SmfEvent = "WLAN_INFO"           // #nosec G101
+	Smf_EvtExpos_SmfEvent_UPF_INFO            Smf_EvtExpos_SmfEvent = "UPF_INFO"            // #nosec G101
+	Smf_EvtExpos_SmfEvent_UP_STATUS_INFO      Smf_EvtExpos_SmfEvent = "UP_STATUS_INFO"      // #nosec G101
+	Smf_EvtExpos_SmfEvent_SATB_CH             Smf_EvtExpos_SmfEvent = "SATB_CH"             // #nosec G101
+	Smf_EvtExpos_SmfEvent_TRAFFIC_CORRELATION Smf_EvtExpos_SmfEvent = "TRAFFIC_CORRELATION" // #nosec G101
 )

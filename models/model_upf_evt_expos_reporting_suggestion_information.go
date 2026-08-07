@@ -12,9 +12,10 @@
 
 package models
 
-// The execution report result on failed modification.
-type PatchResult struct {
-	// The execution report contains an array of report items. Each report item indicates one
-	// failed modification.
-	Report []ReportItem `json:"report,omitempty" yaml:"report,omitempty" bson:"report,omitempty"`
+// Reporting Suggestion Information
+type Upf_EvtExpos_ReportingSuggestionInformation struct {
+	ReportingUrgency Upf_EvtExpos_ReportingUrgency `json:"reportingUrgency,omitempty" yaml:"reportingUrgency,omitempty" bson:"reportingUrgency,omitempty"`
+
+	// indicating a time in seconds.
+	ReportingTimeInfo int32 `json:"reportingTimeInfo,omitempty" yaml:"reportingTimeInfo,omitempty" bson:"reportingTimeInfo,omitempty"`
 }

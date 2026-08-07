@@ -12,9 +12,9 @@
 
 package models
 
-// The execution report result on failed modification.
-type PatchResult struct {
-	// The execution report contains an array of report items. Each report item indicates one
-	// failed modification.
-	Report []ReportItem `json:"report,omitempty" yaml:"report,omitempty" bson:"report,omitempty"`
+// TSC Management Information
+type Upf_EvtExpos_TscManagementInfo struct {
+	Pmics []Pcf_SMPolCtrl_PortManagementContainer `json:"pmics,omitempty" yaml:"pmics,omitempty" bson:"pmics,omitempty"`
+
+	Umic *Pcf_SMPolCtrl_BridgeManagementContainer `json:"umic,omitempty" yaml:"umic,omitempty" bson:"umic,omitempty"`
 }

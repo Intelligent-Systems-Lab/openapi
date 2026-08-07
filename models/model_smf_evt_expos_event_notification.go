@@ -54,6 +54,21 @@ type Smf_EvtExpos_EventNotification struct {
 
 	DnaiChgType DnaiChangeType `json:"dnaiChgType,omitempty" yaml:"dnaiChgType,omitempty" bson:"dnaiChgType,omitempty"`
 
+	// The candidate DNAI(s) for the PDU Session.
+	CandidateDnais []string `json:"candidateDnais,omitempty" yaml:"candidateDnais,omitempty" bson:"candidateDnais,omitempty"`
+
+	// If provided and set to true, it indicates that the candidate DNAIs provided in the
+	// candidateDnais attribute are in descending priority order, i.e., the lower the array index
+	// the higher the priority of the respective DNAI. If omitted, the default value is false.
+	CandDnaisPrioInd bool `json:"candDnaisPrioInd,omitempty" yaml:"candDnaisPrioInd,omitempty" bson:"candDnaisPrioInd,omitempty"`
+
+	// Indication of EAS re-discovery. If present and set to \"true\", it indicates the EAS
+	// re-discovery is performed, e.g. due to change of common EAS. Default value is \"false\" if
+	// omitted.
+	EasRediscoverInd bool `json:"easRediscoverInd,omitempty" yaml:"easRediscoverInd,omitempty" bson:"easRediscoverInd,omitempty"`
+
+	TrafCorreInfo *Smf_EvtExpos_TrafficCorrelationNotification `json:"trafCorreInfo,omitempty" yaml:"trafCorreInfo,omitempty" bson:"trafCorreInfo,omitempty"`
+
 	// String identifying a IPv4 address formatted in the 'dotted decimal' notation as defined in
 	// RFC 1166.
 	SourceUeIpv4Addr string `json:"sourceUeIpv4Addr,omitempty" yaml:"sourceUeIpv4Addr,omitempty" bson:"sourceUeIpv4Addr,omitempty"`
@@ -90,6 +105,8 @@ type Smf_EvtExpos_EventNotification struct {
 
 	AccType AccessType `json:"accType,omitempty" yaml:"accType,omitempty" bson:"accType,omitempty"`
 
+	PduAccTypes []AccessType `json:"pduAccTypes,omitempty" yaml:"pduAccTypes,omitempty" bson:"pduAccTypes,omitempty"`
+
 	// Unsigned integer identifying a PDU session, within the range 0 to 255, as specified in
 	// clause 11.2.3.1b, bits 1 to 8, of 3GPP TS 24.007. If the PDU Session ID is allocated by the
 	// Core Network for UEs not supporting N1 mode, reserved range 64 to 95 is used. PDU Session ID
@@ -116,6 +133,8 @@ type Smf_EvtExpos_EventNotification struct {
 	Ipv6Addrs []string `json:"ipv6Addrs,omitempty" yaml:"ipv6Addrs,omitempty" bson:"ipv6Addrs,omitempty"`
 
 	PduSessType PduSessionType `json:"pduSessType,omitempty" yaml:"pduSessType,omitempty" bson:"pduSessType,omitempty"`
+
+	SscMode SscMode `json:"sscMode,omitempty" yaml:"sscMode,omitempty" bson:"sscMode,omitempty"`
 
 	// Unsigned integer identifying a QoS flow, within the range 0 to 63.
 	Qfi int32 `json:"qfi,omitempty" yaml:"qfi,omitempty" bson:"qfi,omitempty"`
@@ -152,8 +171,21 @@ type Smf_EvtExpos_EventNotification struct {
 
 	RtDelays []int32 `json:"rtDelays,omitempty" yaml:"rtDelays,omitempty" bson:"rtDelays,omitempty"`
 
-	// Represents the packet delay measurement failure indicator.
-	Pdmf bool `json:"pdmf,omitempty" yaml:"pdmf,omitempty" bson:"pdmf,omitempty"`
+	// Unsigned Integer, i.e. only value 0 and integers above 0 are permissible.
+	UlCongInfo int32 `json:"ulCongInfo,omitempty" yaml:"ulCongInfo,omitempty" bson:"ulCongInfo,omitempty"`
+
+	// Unsigned Integer, i.e. only value 0 and integers above 0 are permissible.
+	DlCongInfo int32 `json:"dlCongInfo,omitempty" yaml:"dlCongInfo,omitempty" bson:"dlCongInfo,omitempty"`
+
+	// String representing a bit rate; the prefixes follow the standard symbols from The
+	// International System of Units, and represent x1000 multipliers, with the exception that
+	// prefix \"K\" is used to represent the standard symbol \"k\".
+	UlDataRate string `json:"ulDataRate,omitempty" yaml:"ulDataRate,omitempty" bson:"ulDataRate,omitempty"`
+
+	// String representing a bit rate; the prefixes follow the standard symbols from The
+	// International System of Units, and represent x1000 multipliers, with the exception that
+	// prefix \"K\" is used to represent the standard symbol \"k\".
+	DlDataRate string `json:"dlDataRate,omitempty" yaml:"dlDataRate,omitempty" bson:"dlDataRate,omitempty"`
 
 	TimeWindow *Nef_TimeWindow `json:"timeWindow,omitempty" yaml:"timeWindow,omitempty" bson:"timeWindow,omitempty"`
 
@@ -179,4 +211,28 @@ type Smf_EvtExpos_EventNotification struct {
 	PduSessInfos []Smf_EvtExpos_PduSessionInformation `json:"pduSessInfos,omitempty" yaml:"pduSessInfos,omitempty" bson:"pduSessInfos,omitempty"`
 
 	UpfInfo *Smf_EvtExpos_UpfInformation `json:"upfInfo,omitempty" yaml:"upfInfo,omitempty" bson:"upfInfo,omitempty"`
+
+	// Represents the packet delay measurement failure indicator.
+	Pdmf bool `json:"pdmf,omitempty" yaml:"pdmf,omitempty" bson:"pdmf,omitempty"`
+
+	SatBackhaulCat SatelliteBackhaulCategory `json:"satBackhaulCat,omitempty" yaml:"satBackhaulCat,omitempty" bson:"satBackhaulCat,omitempty"`
+
+	// A string used to indicate the features supported by an API that is used as defined in clause
+	// 6.6 in 3GPP TS 29.500. The string shall contain a bitmask indicating supported features in
+	// hexadecimal representation Each character in the string shall take a value of \"0\" to \"9\",
+	//  \"a\" to \"f\" or \"A\" to \"F\" and shall represent the support of 4 features as described
+	// in  table 5.2.2-3. The most significant character representing the highest-numbered features
+	// shall  appear first in the string, and the character representing features 1 to 4 shall
+	// appear last  in the string. The list of features and their numbering (starting with 1) are
+	// defined  separately for each API. If the string contains a lower number of characters than
+	// there are  defined features for an API, all features that would be represented by characters
+	// that are not  present in the string are not supported.
+	SupportedFeatures string `json:"supportedFeatures,omitempty" yaml:"supportedFeatures,omitempty" bson:"supportedFeatures,omitempty"`
+
+	// Identifier of the Application Function responsible for the target DNAI.
+	TargetAfId string `json:"targetAfId,omitempty" yaml:"targetAfId,omitempty" bson:"targetAfId,omitempty"`
+
+	// Unsigned integer representing a 5G QoS Identifier (see clause 5.7.2.1 of 3GPP TS 23.501,
+	// within the range 0 to 255.
+	Var5qi int32 `json:"5qi,omitempty" yaml:"5qi,omitempty" bson:"5qi,omitempty"`
 }

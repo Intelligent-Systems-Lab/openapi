@@ -12,9 +12,11 @@
 
 package models
 
-// The execution report result on failed modification.
-type PatchResult struct {
-	// The execution report contains an array of report items. Each report item indicates one
-	// failed modification.
-	Report []ReportItem `json:"report,omitempty" yaml:"report,omitempty" bson:"report,omitempty"`
-}
+type SubscriptionAction string
+
+// List of SubscriptionAction
+const (
+	SubscriptionAction_CLOSE                   SubscriptionAction = "CLOSE"                   // #nosec G101
+	SubscriptionAction_CONTINUE_WITH_MUTING    SubscriptionAction = "CONTINUE_WITH_MUTING"    // #nosec G101
+	SubscriptionAction_CONTINUE_WITHOUT_MUTING SubscriptionAction = "CONTINUE_WITHOUT_MUTING" // #nosec G101
+)

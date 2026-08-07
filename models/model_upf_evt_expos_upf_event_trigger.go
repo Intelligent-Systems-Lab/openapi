@@ -12,9 +12,10 @@
 
 package models
 
-// The execution report result on failed modification.
-type PatchResult struct {
-	// The execution report contains an array of report items. Each report item indicates one
-	// failed modification.
-	Report []ReportItem `json:"report,omitempty" yaml:"report,omitempty" bson:"report,omitempty"`
-}
+type Upf_EvtExpos_UpfEventTrigger string
+
+// List of Upf_EvtExpos_UpfEventTrigger
+const (
+	Upf_EvtExpos_UpfEventTrigger_ONE_TIME Upf_EvtExpos_UpfEventTrigger = "ONE_TIME" // #nosec G101
+	Upf_EvtExpos_UpfEventTrigger_PERIODIC Upf_EvtExpos_UpfEventTrigger = "PERIODIC" // #nosec G101
+)

@@ -12,9 +12,11 @@
 
 package models
 
-// The execution report result on failed modification.
-type PatchResult struct {
-	// The execution report contains an array of report items. Each report item indicates one
-	// failed modification.
-	Report []ReportItem `json:"report,omitempty" yaml:"report,omitempty" bson:"report,omitempty"`
-}
+type BufferedNotificationsAction string
+
+// List of BufferedNotificationsAction
+const (
+	BufferedNotificationsAction_SEND_ALL    BufferedNotificationsAction = "SEND_ALL"    // #nosec G101
+	BufferedNotificationsAction_DISCARD_ALL BufferedNotificationsAction = "DISCARD_ALL" // #nosec G101
+	BufferedNotificationsAction_DROP_OLD    BufferedNotificationsAction = "DROP_OLD"    // #nosec G101
+)

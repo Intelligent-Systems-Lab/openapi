@@ -12,9 +12,12 @@
 
 package models
 
-// The execution report result on failed modification.
-type PatchResult struct {
-	// The execution report contains an array of report items. Each report item indicates one
-	// failed modification.
-	Report []ReportItem `json:"report,omitempty" yaml:"report,omitempty" bson:"report,omitempty"`
-}
+type Upf_EvtExpos_DnProtocol string
+
+// List of Upf_EvtExpos_DnProtocol
+const (
+	Upf_EvtExpos_DnProtocol_DNS_QNAME Upf_EvtExpos_DnProtocol = "DNS_QNAME" // #nosec G101
+	Upf_EvtExpos_DnProtocol_TLS_SNI   Upf_EvtExpos_DnProtocol = "TLS_SNI"   // #nosec G101
+	Upf_EvtExpos_DnProtocol_TLS_SAN   Upf_EvtExpos_DnProtocol = "TLS_SAN"   // #nosec G101
+	Upf_EvtExpos_DnProtocol_TLS_SCN   Upf_EvtExpos_DnProtocol = "TLS_SCN"   // #nosec G101
+)

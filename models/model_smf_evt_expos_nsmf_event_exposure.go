@@ -59,6 +59,22 @@ type Smf_EvtExpos_NsmfEventExposure struct {
 
 	Snssai *Snssai `json:"snssai,omitempty" yaml:"snssai,omitempty" bson:"snssai,omitempty"`
 
+	// DNAI (Data network access identifier), see clause 5.6.7 of 3GPP TS 23.501.
+	Dnai string `json:"dnai,omitempty" yaml:"dnai,omitempty" bson:"dnai,omitempty"`
+
+	// SSID that the PDU session is related to.
+	SsId string `json:"ssId,omitempty" yaml:"ssId,omitempty" bson:"ssId,omitempty"`
+
+	// BSSID that the PDU session is related to.
+	BssId string `json:"bssId,omitempty" yaml:"bssId,omitempty" bson:"bssId,omitempty"`
+
+	// UPF identity.
+	UpfId string `json:"upfId,omitempty" yaml:"upfId,omitempty" bson:"upfId,omitempty"`
+
+	// String uniquely identifying a NF instance. The format of the NF Instance ID shall be a
+	// Universally Unique Identifier (UUID) version 4, as described in IETF RFC 4122.
+	NfId string `json:"nfId,omitempty" yaml:"nfId,omitempty" bson:"nfId,omitempty"`
+
 	// Identifies an Individual SMF Notification Subscription. To enable that the value is used as
 	// part of a URI, the string shall only contain characters allowed according to the
 	// \"lower-with-hyphen\" naming convention defined in 3GPP TS 29.501. In an OpenAPI schema, the
@@ -125,4 +141,18 @@ type Smf_EvtExpos_NsmfEventExposure struct {
 	GrpRepTime int32 `json:"grpRepTime,omitempty" yaml:"grpRepTime,omitempty" bson:"grpRepTime,omitempty"`
 
 	NotifFlag NotificationFlag `json:"notifFlag,omitempty" yaml:"notifFlag,omitempty" bson:"notifFlag,omitempty"`
+
+	NotifFlagInstruct *MutingExceptionInstructions `json:"notifFlagInstruct,omitempty" yaml:"notifFlagInstruct,omitempty" bson:"notifFlagInstruct,omitempty"`
+
+	MutingSetting *MutingNotificationsSettings `json:"mutingSetting,omitempty" yaml:"mutingSetting,omitempty" bson:"mutingSetting,omitempty"`
+
+	// Indicates whether the NF service consumer requests to receive QoS Flow performance
+	// information for the QoS Flow associated with the default QoS rule if there are no
+	// measurements available for the provided Application Identifier included in the appIds
+	// attribute.
+	DefQosSupp bool `json:"defQosSupp,omitempty" yaml:"defQosSupp,omitempty" bson:"defQosSupp,omitempty"`
+
+	// Indicates that the reporting will be activated when the measurements are enabled by a PCC
+	// rule. It shall always be set to true when present. It may only be provided in the response.
+	QosMonPending bool `json:"qosMonPending,omitempty" yaml:"qosMonPending,omitempty" bson:"qosMonPending,omitempty"`
 }

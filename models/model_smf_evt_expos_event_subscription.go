@@ -24,6 +24,8 @@ type Smf_EvtExpos_EventSubscription struct {
 
 	AppIds []string `json:"appIds,omitempty" yaml:"appIds,omitempty" bson:"appIds,omitempty"`
 
+	NetworkArea *Pcf_BDTPolCtrl_NetworkAreaInfo `json:"networkArea,omitempty" yaml:"networkArea,omitempty" bson:"networkArea,omitempty"`
+
 	TargetPeriod *Nef_TimeWindow `json:"targetPeriod,omitempty" yaml:"targetPeriod,omitempty" bson:"targetPeriod,omitempty"`
 
 	// Indicates the subscription for UE transaction dispersion collectionon, if it is included and
@@ -34,4 +36,7 @@ type Smf_EvtExpos_EventSubscription struct {
 	TransacMetrics []Smf_EvtExpos_TransactionMetric `json:"transacMetrics,omitempty" yaml:"transacMetrics,omitempty" bson:"transacMetrics,omitempty"`
 
 	UeIpAddr *IpAddr `json:"ueIpAddr,omitempty" yaml:"ueIpAddr,omitempty" bson:"ueIpAddr,omitempty"`
+
+	// Indicates UPF event exposure information.
+	UpfEvents []Upf_EvtExpos_UpfEvent `json:"upfEvents,omitempty" yaml:"upfEvents,omitempty" bson:"upfEvents,omitempty"`
 }
