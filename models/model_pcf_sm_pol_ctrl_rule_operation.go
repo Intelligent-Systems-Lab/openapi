@@ -19,7 +19,7 @@ const (
 	Pcf_SMPolCtrl_RuleOperation_CREATE_PCC_RULE                               Pcf_SMPolCtrl_RuleOperation = "CREATE_PCC_RULE"                               // #nosec G101
 	Pcf_SMPolCtrl_RuleOperation_DELETE_PCC_RULE                               Pcf_SMPolCtrl_RuleOperation = "DELETE_PCC_RULE"                               // #nosec G101
 	Pcf_SMPolCtrl_RuleOperation_MODIFY_PCC_RULE_AND_ADD_PACKET_FILTERS        Pcf_SMPolCtrl_RuleOperation = "MODIFY_PCC_RULE_AND_ADD_PACKET_FILTERS"        // #nosec G101
-	Pcf_SMPolCtrl_RuleOperation_MODIFY__PCC_RULE_AND_REPLACE_PACKET_FILTERS   Pcf_SMPolCtrl_RuleOperation = "MODIFY_ PCC_RULE_AND_REPLACE_PACKET_FILTERS"   // #nosec G101
-	Pcf_SMPolCtrl_RuleOperation_MODIFY__PCC_RULE_AND_DELETE_PACKET_FILTERS    Pcf_SMPolCtrl_RuleOperation = "MODIFY_ PCC_RULE_AND_DELETE_PACKET_FILTERS"    // #nosec G101
+	Pcf_SMPolCtrl_RuleOperation_MODIFY_PCC_RULE_AND_REPLACE_PACKET_FILTERS    Pcf_SMPolCtrl_RuleOperation = "MODIFY_PCC_RULE_AND_REPLACE_PACKET_FILTERS"    // #nosec G101
+	Pcf_SMPolCtrl_RuleOperation_MODIFY_PCC_RULE_AND_DELETE_PACKET_FILTERS     Pcf_SMPolCtrl_RuleOperation = "MODIFY_PCC_RULE_AND_DELETE_PACKET_FILTERS"     // #nosec G101
 	Pcf_SMPolCtrl_RuleOperation_MODIFY_PCC_RULE_WITHOUT_MODIFY_PACKET_FILTERS Pcf_SMPolCtrl_RuleOperation = "MODIFY_PCC_RULE_WITHOUT_MODIFY_PACKET_FILTERS" // #nosec G101
 )
