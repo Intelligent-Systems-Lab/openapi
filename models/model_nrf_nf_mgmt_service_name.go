@@ -162,6 +162,7 @@ const (
 	Nrf_NFMgmt_ServiceName_NNSSF_CMI                        Nrf_NFMgmt_ServiceName = "nnssf-cmi"                        // #nosec G101
 	Nrf_NFMgmt_ServiceName_NUPF_OAM                         Nrf_NFMgmt_ServiceName = "nupf-oam"                         // #nosec G101
 	Nrf_NFMgmt_ServiceName_NUPF_CMI                         Nrf_NFMgmt_ServiceName = "nupf-cmi"                         // #nosec G101
+	Nrf_NFMgmt_ServiceName_NUPF_EE                          Nrf_NFMgmt_ServiceName = "nupf-ee"                          // #nosec G101
 	Nrf_NFMgmt_ServiceName_3GPP_PFD_MANAGEMENT              Nrf_NFMgmt_ServiceName = "3gpp-pfd-management"              // #nosec G101
 	Nrf_NFMgmt_ServiceName_NLMF_BROADCAST                   Nrf_NFMgmt_ServiceName = "nlmf-broadcast"                   // #nosec G101
 	Nrf_NFMgmt_ServiceName_NLMF_OAM                         Nrf_NFMgmt_ServiceName = "nlmf-oam"                         // #nosec G101
